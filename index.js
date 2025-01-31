@@ -71,7 +71,7 @@ const app = express();
 
 
 app.use(cors({
-  origin: ['https://your-frontend-vercel-url.vercel.app'],
+  origin: ['https://mern-book-front-ruby.vercel.app'],
   credentials: true
 })); 
 // Middleware - JSON body parser
