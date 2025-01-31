@@ -52,23 +52,28 @@ require('dotenv').config();
 const app = express();
 
 
-const allowedOrigins = [
-  'https://mern-book-frontend-zvy91ilte-joyandrew-githubs-projects.vercel.app/', // Your deployed frontend URL
-  'http://localhost:5173', // Your local frontend URL for development
-];
+// const allowedOrigins = [
+//   'https://mern-book-frontend-zvy91ilte-joyandrew-githubs-projects.vercel.app/', // Your deployed frontend URL
+//   'http://localhost:5173', // Your local frontend URL for development
+// ];
+
+// app.use(cors({
+//   origin: function (origin, callback) {
+//     // Check if the origin is in the allowedOrigins array
+//     if (allowedOrigins.includes(origin) || !origin) {
+//       callback(null, true); // Allow the request
+//     } else {
+//       callback(new Error('Not allowed by CORS')); // Deny the request
+//     }
+//   },
+//   credentials: true
+// }));
+
 
 app.use(cors({
-  origin: function (origin, callback) {
-    // Check if the origin is in the allowedOrigins array
-    if (allowedOrigins.includes(origin) || !origin) {
-      callback(null, true); // Allow the request
-    } else {
-      callback(new Error('Not allowed by CORS')); // Deny the request
-    }
-  },
+  origin: ['https://your-frontend-vercel-url.vercel.app'],
   credentials: true
-}));
-
+})); 
 // Middleware - JSON body parser
 app.use(express.json());
 
