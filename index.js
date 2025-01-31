@@ -51,9 +51,9 @@ require('dotenv').config();
 
 const app = express();
 
-// Middleware - CORS setup
+
 const allowedOrigins = [
-  'https://mern-book-frontend-zvy91ilte-joyandrew-githubs-projects.vercel.app', // Your deployed frontend URL
+  'https://mern-book-frontend-zvy91ilte-joyandrew-githubs-projects.vercel.app/', // Your deployed frontend URL
   'http://localhost:5173', // Your local frontend URL for development
 ];
 
